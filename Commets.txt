@@ -184,3 +184,24 @@ const producto = {
 }
 
 console.log(producto.informacion.fabricacion.paisOrigen);
+
+======================
+//obliga a seguir reglas de estructuras 
+"use strict"
+Object.freeze(producto); //no permite modificar un objeto
+Object.freeze(producto); //no permite borrar ni agregar variables pero si permite que se modifique 
+producto.imagen = "img.jpg" //esto dara error si objeto esta declarado como const.
+delete producto.precio;  //esto tambien dara un error
+console.log(object.isFrozen(producto)); //dara como respuesta true si el objeto esta freeze 
+console.log(object.isSealed(producto))    
+================
+Crear una funcion dentro de un objeto
+
+const marcas = {
+    nombre: "Fiat",
+    pais: "USA",
+    mostrarInfo: function(){
+        console.log(`El producto: ${this.nombre} es del pais: ${this.pais}`);
+    }
+}
+marcas.mostrarInfo();
