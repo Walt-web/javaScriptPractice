@@ -1,0 +1,186 @@
+CAPITULO 1 AL 5. 
+
+Comentar una linea en html 
+ctrl + k + c. 
+
+//Esta Linea muestra como crear un archivo JS dentro de un HTML
+<script  src="rutaRelativaDelArchivo"></script>
+
+//Esta Linea muestra como buscar un elemento el DOM desde JS 
+//y con innerHTML cambiamos el valor por el contenido de la variable
+document.querySelector('.contenido').innerHTML = `${variable}` 
+	
+//Esto se llama template de string sirve para agregar una variable a un string en JS
+	`${}` 
+	
+===================================================
+Comando Java Script: 
+	alert();
+	prompt(); //crea una alerta donde se puede scribir y asignar ese valor a una variable
+	console.log();
+	console.error();
+	console.warn();
+	console.table(); para arreglos
+	console.clear();
+
+{	console.time("Hola");
+        console.warn("Esto no está permitido");
+        console.warn("Esto no está permitido");
+        console.warn("Esto no está permitido");				Muestra cuanto tarda en ejecutarse el codigo
+        console.warn("Esto no está permitido");
+	console.timeEnd("Hola"); }
+
+	===========
+	//ESLINT
+	
+	eslint permite corregir errores de escritura en el codigo de un archivo js. 
+	se instala con npme i -g eslint 
+	y se ejecuta desde un comand prop situado en la carpeta donde existe el archivo 
+	y ejecutando por ej. eslint js/app.js --fix (Fix es para corregir automaticamente los errores de sintaxis)
+	
+	La diferencia entre Var y Let tiene que ver con el scope de las variables pero tienen las mismas reglas
+	no pueden iniciar con numero, no pueden especios en el mombre puede escribirse en camelCase o snake no pueden usar 
+	palabras reservadas y en javascript al ser un lenguaje tipado no se asigna el tipo de dato cuando se crea una variable
+	tambien reasignarle valores de distintos tipos.
+	
+	===============
+	la variable const no se pueden reasignar y no se pueden inicializar vacias. 
+	Las demas reglas aplican igual que con var y let.
+	
+	===============
+
+    String: Se pueden crear de manera implicita
+	
+	let nombre = "Walter";
+	let apellido = 'Servin';
+	let segundoNombre = String("Andres");
+	(Esto significa que es un objeto y se lee valor por valor como si fuera un erreglo)
+
+    Metodos para string 
+	.length indica la cantidad de caracteres del string 
+	.indexOf('21') indica en que posicion del string existe esta palabra 
+	producto.concat(precio) concatena texto 
+	.trimStar() elimia espacios de una cadena de string del principio 
+	.trimEnd() elimina espaciones de una cadena de string al final
+	.replace() cambiar parte de una cadena de texto 
+	.slice() corta el texto y toma la ubicacion de los caracteres entre las posiciones indicadas
+	.substring(); hace lo mismo que slice pero puedes poner un valor de posicion mayor a otro
+	.charAt(0) corta la letra de la posicion que se elige 
+	.repeat 
+	const texto = 'en promocion'.repeat(3)
+	console.log(texto) imprime en promocion en promocionen promocion
+	console.log(`${producto} ${texto}`)
+	en JS se pueden anidar funciones console.log(textWithTabs.trimStart().trimEnd().length);
+	.toUpperCase() cambia todo el texto a mayuscula
+	.toLowerCase() cambia todo el texto a minuscula 
+	.toString() Cambia un valor de numero a texto 
+
+    ==================================
+    // "Escape de comillas barra invertida \" "
+	const producto = "Monitor 20 \"";
+	//Funcion replace; cambiar el valor de un string seleccionando una variable
+	//Por un valor de la cadena de estring
+	producto.replace('Monitor', 'TV');
+	console.log(producto.replace('Monitor', 'TV'));
+
+	//Funcion .toUpperCase cambia todo el texto a mayusculas
+	const hobbies = 'Leer, Escribir, Caminar, Estudiar'.toUpperCase();
+
+	//Funcion .split, selecciona una lista de string  y 
+	//crea una lista con un valor intermedio en comun 
+	const categorias = hobbies.split(",");
+	console.log()
+
+    document.querySelector('p.hashtag').innerHTML =  `CATEGORIAS:  ${categorias}`;
+    ===============================
+    const numero1 = 10, numero2 = 10.5, numero3 = .1051, numero4 = -20.
+    Formas de hacer calculos Suma + Resta - Multiplicacion *  Division/   Modulo& (muestra el resto de una formula)
+    Math.floor(15.985) redondea un valor flotante 
+    //desde visual
+    Math.round(2.6)
+    Math.ciel(2.1) Redondea siempre hacia arriba
+    Math.floor(2.9) redondea hacia abajo
+    Toma siempre el valor absoluto ignorando el valor menos por ejemplo. 
+    Math.abs()
+    Math.min()
+    Math.max()
+    Math.random() 
+
+    variable++ primero muestra el valor original cuando se llama a la variable nuevamente es cuando se suma uno 
+
+    typeOf indica el tipo de dato de una variable
+    de una variable string que contiene un numero podemos cambiar a numero con las siguientes funciones
+    Numer.parseInt(Variable);
+    Number.parseFloat(Variable);
+    Number.parseInt("UNO") retorna NaN que significa no es un numero 
+    Con la funcion Number.isInteger(Variable) retorna true o false validando si el valor de la varible es un entero
+
+    Comparadores 
+    == comparador no extricto. Compara solo el valor sin verificar el tipo de dato 20=="20" esto retorna true
+    === es un comparador estricto. Compara el valor y el tipo de datos 20="20" esto retorna false
+    Ejemplo: 
+    const numero1 = 20;
+    const numero2= "20";
+    console.log(numero1 === parseInt(numero2)); //esto retorna true
+    console.log (typeof numero2); //retorna number
+
+    ===================
+    Operador ternario: boolean ? 'sucede cuando retonarna True' : ' sucede cuando retorna False'
+    console.log() 
+    ==============//////////////=================
+    CAPITULO 6 al 10 
+    boolean 
+    const boolena1 = true;
+    console.log(typeOf boolena1); //retorna boolean. 
+
+    const boolean4 = new Boolean(true);
+    console.log(typeOf boolena1); //retorna object. Ya que en la linea anterior se creo un objeto no un boolean
+    
+    =====================
+    Objetos agrupan muchas variables en una sola.
+    //Object literal 
+    const producto = {
+        //Propiedad o llave del objeto 
+        //LLAVE y VALOR
+        nombre: "Monitor 20 pulgadas",
+        precio: 300,
+        disponible: true,
+    }
+
+    console.log(producto)
+
+    Como acceder a un objeto
+    //Sintaxis de punto 
+    console.log(producto.nombre);
+    //sintaxis de corchete
+    console.log(producto[nombre]);
+
+    //Agregar una variable al objeto 
+    producto.imagen = "img.jpg"
+    //Eliminar propiedades del objeto 
+    delete producto.precio;
+
+    //Asignar el valor de un objeto a una variable
+    let nombre = producto.nombre;
+    //Object destructuring - Permite extraer una llave de un objeto y crear una variable en el mismo paso. 
+    const {nombre,precio} = producto;
+
+======================================
+crear objeto anidado
+const producto = {
+    nombre: "Monitor 20\"",
+    precio: 300,
+    disponible: true,
+    informacion: {
+        medidas: {
+            memoria: "1gh",
+            peso: "1kg"
+        },
+        fabricacion: {
+            paisOrigen: "China",
+            modelo: "IR1122"
+        }
+    }
+}
+
+console.log(producto.informacion.fabricacion.paisOrigen);
